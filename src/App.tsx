@@ -1,10 +1,10 @@
 import React from "react";
-import Bounce from "./lib/Bounce";
-import Fade from "./lib/Fade";
-import Pulse from "./lib/Pulse";
-import Rotate from "./lib/Rotate";
-import Scale from "./lib/Scale";
-import Slide from "./lib/Slide";
+import Bounce from "./lib/animation/Bounce";
+import Fade from "./lib/animation/Fade";
+import Pulse from "./lib/animation/Pulse";
+import Rotate from "./lib/animation/Rotate";
+import Scale from "./lib/animation/Scale";
+import Slide from "./lib/animation/Slide";
 
 function App() {
   return <div>hello world</div>;
