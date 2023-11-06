@@ -1,26 +1,13 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Bounce from "./lib/Bounce";
+import Fade from "./lib/Fade";
+import Pulse from "./lib/Pulse";
+import Rotate from "./lib/Rotate";
+import Scale from "./lib/Scale";
+import Slide from "./lib/Slide";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <div>hello world</div>;
 }
 
 export default App;
