@@ -1,7 +1,25 @@
 {
   "name": "react-basic-motion",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "browser": "./browser/specific/main.js",
+  "description": "animation",
+  "keywords": [
+    "react",
+    "component",
+    "animation",
+    "css"
+  ],
+  "author": {
+    "name": "devsth"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjindev/react-basic-motion"
+  },
+  "license": "MIT",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
