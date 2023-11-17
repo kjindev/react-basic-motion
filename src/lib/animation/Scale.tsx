@@ -1,6 +1,6 @@
 interface Datatype {
   children: any;
-  type: string;
+  name: string;
   range: number[];
   duration: number;
   timing: string;
@@ -9,7 +9,7 @@ interface Datatype {
 
 export default function Scale({
   children,
-  type,
+  name,
   range,
   duration,
   timing,
@@ -48,14 +48,14 @@ export default function Scale({
     animation: `inAndOutAnimation ${duration}s ${timing} ${count}`,
   };
 
-  if (type === "scale") {
+  if (name === "scale") {
     return (
       <>
         <style>{scaleKeyframes}</style>
         <div style={scale}>{children}</div>
       </>
     );
-  } else if (type === "inAndOut") {
+  } else if (name === "inAndOut") {
     return (
       <>
         <style>{inAndOutKeyframes}</style>

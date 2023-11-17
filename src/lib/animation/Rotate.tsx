@@ -1,6 +1,6 @@
 interface Datatype {
   children: any;
-  type: string;
+  name: string;
   duration: number;
   timing: string;
   count: number | string;
@@ -8,7 +8,7 @@ interface Datatype {
 
 export default function Rotate({
   children,
-  type,
+  name,
   duration,
   timing,
   count,
@@ -43,14 +43,14 @@ export default function Rotate({
     animation: `counterClockRotateAnimation ${duration}s ${timing} ${count}`,
   };
 
-  if (type === "clock") {
+  if (name === "clock") {
     return (
       <>
         <style>{clockKeyframes}</style>
         <div style={clockRotate}>{children}</div>
       </>
     );
-  } else if (type === "counterClock") {
+  } else if (name === "counterClock") {
     return (
       <>
         <style>{counterClockKeyframes}</style>

@@ -1,6 +1,6 @@
 interface Datatype {
   children: any;
-  type: string;
+  name: string;
   range: number;
   duration: number;
   timing: string;
@@ -9,7 +9,7 @@ interface Datatype {
 
 export default function Bounce({
   children,
-  type,
+  name,
   range,
   duration,
   timing,
@@ -51,14 +51,14 @@ export default function Bounce({
     animation: `yBounceAnimation ${duration}s ${timing} ${count}`,
   };
 
-  if (type === "x") {
+  if (name === "x") {
     return (
       <>
         <style>{xBounceKeyframes}</style>
         <div style={xBounce}>{children}</div>
       </>
     );
-  } else if (type === "y") {
+  } else if (name === "y") {
     return (
       <>
         <style>{yBounceKeyframes}</style>

@@ -1,6 +1,6 @@
 interface Datatype {
   children: any;
-  type: string;
+  name: string;
   duration: number;
   timing: string;
   count: number | string;
@@ -8,7 +8,7 @@ interface Datatype {
 
 export default function Fade({
   children,
-  type,
+  name,
   timing,
   duration,
   count,
@@ -61,21 +61,21 @@ export default function Fade({
     animation: `blinkAnimation ${duration}s ${timing} ${count}`,
   };
 
-  if (type === "fadein") {
+  if (name === "fadein") {
     return (
       <>
         <style>{fadeinKeyframes}</style>
         <div style={fadein}>{children}</div>
       </>
     );
-  } else if (type === "fadeout") {
+  } else if (name === "fadeout") {
     return (
       <>
         <style>{fadeoutKeyframes}</style>
         <div style={fadeout}>{children}</div>
       </>
     );
-  } else if (type === "blink") {
+  } else if (name === "blink") {
     return (
       <>
         <style>{blinkKeyframes}</style>
