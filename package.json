@@ -1,6 +1,6 @@
 {
   "name": "react-basic-motion",
-  "version": "2.0.0",
+  "version": "2.1.2",
   "private": false,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,10 @@
   "keywords": [
     "react",
     "component",
+    "motion",
     "animation",
+    "loading",
+    "skeleton",
     "css"
   ],
   "author": {

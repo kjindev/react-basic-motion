@@ -1,32 +1,32 @@
 # react-basic-motion
 
-The Simple React Animation Library
+The Simple React CSS Component Library
+
+## Installing
+
+    npm install react-basic-motion
 
 ## Features
 
-- Simple React Component
+- React CSS Component
 - TypeScript Support
 
 ## Docs
 
-- link
+[react-basic-motion](https://react-basic-motion-docs.vercel.app/)
 
-## Motion Type
+## Simple Example
 
-- Slide
-- Bounce
-- Fade
-- Pulse
-- Rotate
-- Scale
+```typescript
+<Bounce
+    name="x"
+    range={ 10 }
+    duration={ 1.5 }
+    timing="ease-in-out"
+    count="infinite"
+>
+    <div>Bounce!<div>
+</Bounce>
+```
 
-## Installing
-
-npm install react-basic-motion
-
-## Example
-
-- Just import it, and just use it !
-- Each motion has a different  props, so please check it.
-- Also, it should include content. If there weren’t nothing in component, it would make errors.
-- Learn more in document !
+Learn more it in docs!
