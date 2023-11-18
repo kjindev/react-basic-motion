@@ -1,5 +1,7 @@
+import React from "react";
+
 interface Datatype {
-  children: any;
+  children: React.ReactNode;
   name: string;
   duration: number;
   timing: string;
@@ -15,16 +17,19 @@ export default function Rotate({
 }: Datatype) {
   const clockKeyframes = `
         @keyframes clockRotateAnimation {
-        0% {
-            transform: rotate(0);
+          0%{
+            transform: rotate(0deg);
           }
-        100% {
+          100%{
             transform: rotate(360deg);
-        }
+          }
         }
       `;
 
   const clockRotate = {
+    width: 0,
+    height: 0,
+    transformOrigin: "50% 50%",
     animation: `clockRotateAnimation ${duration}s ${timing} ${count}`,
   };
 
@@ -40,6 +45,7 @@ export default function Rotate({
   `;
 
   const counterClockRotate = {
+    transformOrigin: "center center",
     animation: `counterClockRotateAnimation ${duration}s ${timing} ${count}`,
   };
 

@@ -1,7 +1,11 @@
+import React from "react";
+
 interface Datatype {
-  children: any;
+  width: string;
+  height: string;
   color: string;
-  radius: number;
+  fillColor: string;
+  radius: string;
   range: number;
   duration: number;
   timing: string;
@@ -9,8 +13,10 @@ interface Datatype {
 }
 
 export default function Pulse({
-  children,
+  width,
+  height,
   color,
+  fillColor,
   radius,
   range,
   duration,
@@ -29,14 +35,17 @@ export default function Pulse({
       `;
 
   const pulse = {
-    borderRadius: `${radius * 100}%`,
+    width: width,
+    height: height,
+    backgroundColor: fillColor,
+    borderRadius: radius,
     animation: `pulseAnimation ${duration}s ${timing} ${count}`,
   };
 
   return (
     <>
       <style>{pulseKeyframes}</style>
-      <div style={pulse}>{children}</div>
+      <div style={pulse}></div>
     </>
   );
 }

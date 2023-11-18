@@ -1,32 +1,34 @@
+import React from "react";
+
 interface Datatype {
-  children: any;
-  radius: number;
-  color: string;
+  radius: string;
   width: string;
   height: string;
   duration: number;
   timing: string;
   count: number | string;
+  className?: string;
 }
 
 export default function Skeleton({
-  children,
   radius,
   width,
   height,
-  color,
   duration,
   timing,
   count,
+  className,
 }: Datatype) {
   const skeletonKeyframes = `
+  @keyframes skeletonAnimation {
             0%, 100% {
-              background-color: ${color}10;
+              background-color: #00000010;
             }
         
             50% {
-              background-color: ${color}15;
+              background-color: #00000018;
             }
+    }
         `;
 
   const skeleton = {
@@ -39,7 +41,7 @@ export default function Skeleton({
   return (
     <>
       <style>{skeletonKeyframes}</style>
-      <div style={skeleton}>{children}</div>
+      <div style={skeleton} className={className}></div>
     </>
   );
 }

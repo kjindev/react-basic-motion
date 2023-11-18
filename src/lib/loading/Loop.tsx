@@ -1,3 +1,5 @@
+import React from "react";
+
 interface Datatype {
   size: number;
   color: string;
@@ -39,7 +41,7 @@ export default function Loop({
             backgroundColor: color,
             animation: `loading ${duration}s ${timing} ${count}`,
             animationDelay: "0s",
-            margin: size / 12,
+            margin: size / 7,
           }}
         ></div>
         <div
@@ -50,7 +52,7 @@ export default function Loop({
             backgroundColor: color,
             animation: `loading ${duration}s ${timing} ${count}`,
             animationDelay: "0.25s",
-            margin: size / 12,
+            margin: size / 7,
           }}
         ></div>
         <div
@@ -61,7 +63,7 @@ export default function Loop({
             backgroundColor: color,
             animation: `loading ${duration}s ${timing} ${count}`,
             animationDelay: "0.5s",
-            margin: size / 12,
+            margin: size / 7,
           }}
         ></div>
       </div>

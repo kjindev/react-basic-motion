@@ -1,5 +1,7 @@
+import React from "react";
+
 interface Datatype {
-  children: any;
+  children: React.ReactNode;
   name: string;
   duration: number;
   timing: string;

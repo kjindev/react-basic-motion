@@ -1,5 +1,7 @@
+import React from "react";
+
 interface Datatype {
-  children: any;
+  children: React.ReactNode;
   name: string;
   range: number[];
   duration: number;
@@ -27,6 +29,8 @@ export default function Scale({
       `;
 
   const scale = {
+    width: 150,
+    height: 150,
     animation: `scaleAnimation ${duration}s ${timing} ${count}`,
   };
 
@@ -45,6 +49,8 @@ export default function Scale({
   `;
 
   const inAndOut = {
+    width: 150,
+    height: 150,
     animation: `inAndOutAnimation ${duration}s ${timing} ${count}`,
   };
 
